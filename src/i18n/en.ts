@@ -1,0 +1,192 @@
+import type { Translation } from './fr';
+
+const en: Translation = {
+  nav: {
+    home: "Home",
+    projects: "Projects",
+    skills: "Stack",
+    services: "Services & Pricing",
+    contact: "Contact",
+    hireMe: "Let's Talk",
+  },
+  hero: {
+    available: "🟢 Available for projects",
+    role: "AI Product Builder",
+    title1: "I turn your idea",
+    title2: "into a working product.",
+    desc: "Fullstack developer based in France. I build functional SaaS MVPs in 2 to 4 weeks with an AI-augmented workflow. Modern stack, fast delivery, production-ready code.",
+    btnContact: "Let's discuss your project",
+    btnProjects: "View my projects",
+  },
+  about: {
+    subtitle: "About",
+    title: "Not your average dev.",
+    p1: "I'm Khalifa, a fullstack developer and AI Product Builder based in France. I don't bill by the hour — I build products.",
+    p2: "My approach: understand your business need, define a tight scope, and deliver a functional MVP in 2 to 4 weeks. I use AI (Claude Code) daily to code faster without sacrificing quality. What takes an agency 1 to 2 months, I deliver in a few weeks.",
+    p3: "My background includes working on Angular/C# projects in a corporate setting, building my own Shopify SaaS (RecoverlyAI), and helping founders launch their first products.",
+    highlights: [
+      "Turn a vague idea into a working app",
+      "Integrate AI into existing products",
+      "Build custom Shopify apps",
+      "Deliver fast, clean, deployed",
+    ],
+    highlightsLabel: "What I do best",
+  },
+  projects: {
+    subtitle: "Work",
+    title: "Recent Projects",
+    items: [
+      {
+        id: 1,
+        title: "RecoverlyAI",
+        category: "Shopify SaaS",
+        description: "Shopify app that generates AI-personalized abandoned cart recovery email sequences. Smart scoring, 6 AI writing styles, 30+ language support, triple-layer billing with 1,811 passing tests. Submitted to the Shopify App Store.",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1770&auto=format&fit=crop",
+        tags: ["NestJS", "Next.js", "Supabase", "Claude API", "Shopify API"],
+        metrics: ["1,811 tests", "30+ languages", "6 AI styles"],
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Freelance MVPs",
+        category: "Custom Web Applications",
+        description: "Fast-track MVP delivery for founders and early-stage startups. From idea to production-deployed product: auth, dashboards, Stripe integrations, databases — clean and documented code.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop",
+        tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
+        metrics: ["2-4 weeks", "100% ownership", "Production-ready"],
+        link: "#",
+      },
+    ],
+  },
+  skills: {
+    subtitle: "Technical Expertise",
+    title: "My Stack",
+    categories: [
+      {
+        title: "Frontend",
+        skills: ["Next.js / React", "Angular", "Tailwind CSS", "TypeScript"],
+      },
+      {
+        title: "Backend",
+        skills: ["NestJS / Node.js", "C# / .NET", "Python", "PostgreSQL"],
+      },
+      {
+        title: "AI & Integrations",
+        skills: ["Claude API (Anthropic)", "OpenAI API", "Shopify API", "Stripe"],
+      },
+      {
+        title: "Infrastructure",
+        skills: ["Supabase", "Vercel / Railway", "Docker", "CI/CD"],
+      },
+    ],
+    workflowTitle: "AI Workflow",
+    workflowDesc: "I use Claude Code daily with specialized agents. What takes a regular dev 3 weeks, I deliver in 1 to 2 weeks — same quality, less time, better price for you.",
+  },
+  process: {
+    subtitle: "How it works",
+    title: "A simple, transparent process.",
+    steps: [
+      {
+        num: "01",
+        title: "Discovery Call",
+        timing: "Day 0",
+        desc: "30 free minutes to understand your need, your market and your priorities. We define together what's essential in the MVP vs what can wait.",
+      },
+      {
+        num: "02",
+        title: "Proposal",
+        timing: "24-48h",
+        desc: "You receive a clear document: precise scope of included AND excluded features, flat-rate price, week-by-week timeline, chosen tech stack.",
+      },
+      {
+        num: "03",
+        title: "Kickoff + Build",
+        timing: "Week 1-3",
+        desc: "50% upfront, I set up the project and start building. Weekly check-in every Monday, demo every Friday. You see progress in real time.",
+      },
+      {
+        num: "04",
+        title: "Delivery",
+        timing: "Week 3-4",
+        desc: "App deployed in production, GitHub repo transferred, technical documentation. You own 100% of your code.",
+      },
+    ],
+    guarantees: [
+      "50% upfront, 50% on delivery — no surprises",
+      "The code is yours — GitHub repo transferred, do whatever you want with it",
+      "Production-ready — deployed, SSL, documented, ready for users",
+    ],
+  },
+  services: {
+    subtitle: "My Services",
+    title: "What I build",
+    items: [
+      {
+        title: "SaaS MVP",
+        price: "€3,000 – €8,000",
+        delay: "2-4 weeks",
+        desc: "Complete web app ready for your first users. Auth (email + Google SSO), dashboard, 3-5 core features, Stripe payments, production deployment.",
+        stack: "Next.js · NestJS · Supabase · Stripe",
+        featured: true,
+      },
+      {
+        title: "AI Integration",
+        price: "€1,500 – €4,000",
+        delay: "1-2 weeks",
+        desc: "I integrate AI into your existing product. Chatbot, content generation, classification, personalized emails. Optimized and tested prompt pipeline.",
+        stack: "Claude API · OpenAI · NestJS · Prompt Engineering",
+        featured: false,
+      },
+      {
+        title: "Custom Shopify App",
+        price: "€3,000 – €6,000",
+        delay: "2-4 weeks",
+        desc: "Custom Shopify app from A to Z. OAuth, webhooks, merchant dashboard, App Store submission. I built my own Shopify app — I know the process end to end.",
+        stack: "Shopify API · Next.js · NestJS · Supabase",
+        featured: false,
+      },
+      {
+        title: "Tech Sprint / Rescue",
+        price: "€1,500 – €3,000",
+        delay: "1 week",
+        desc: "Your project is stuck, buggy or poorly architected? I come in as firefighter: full audit, critical bug fixes, refactoring, clean stack setup.",
+        stack: "Audit · Refactoring · CI/CD · Tests",
+        featured: false,
+      },
+    ],
+    tjm: "Daily Rate (short missions)",
+    tjmPrice: "€450",
+    tjmUnit: "/day",
+    tjmDesc: "For team reinforcement or short missions.",
+  },
+  contact: {
+    subtitle: "What's Next",
+    title1: "Let's talk about",
+    title2: "your project.",
+    desc: "Fill out the form or write to me directly. I reply within 24 hours.",
+    fields: {
+      name: "Your name *",
+      email: "Your email *",
+      projectType: "Project type",
+      projectTypeOptions: [
+        "SaaS MVP",
+        "AI Integration",
+        "Shopify App",
+        "Tech Sprint",
+        "Other",
+      ],
+      budget: "Estimated budget",
+      budgetOptions: ["€1,000 – €3,000", "€3,000 – €5,000", "€5,000 – €10,000", "€10,000+"],
+      message: "Describe your project *",
+      submit: "Send my project",
+    },
+    email: "khalifatambadou.dev@gmail.com",
+    emailLabel: "Or write to me directly",
+  },
+  footer: {
+    rights: "All rights reserved.",
+    tagline: "AI Product Builder · France",
+  },
+};
+
+export default en;
