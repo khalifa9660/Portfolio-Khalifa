@@ -11,7 +11,7 @@ type ProjectItem = {
   image: string;
   tags: string[];
   metrics: string[];
-  link: string;
+  link?: string;
   video?: string;
 };
 
@@ -163,13 +163,17 @@ function ProjectCard({ project, index, onPlayVideo }: {
                 Démo
               </button>
             )}
-            <a
-              href={project.link}
-              className="text-gray-400 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors"
-              aria-label={`Voir ${project.title}`}
-            >
-              <ExternalLink className="w-4 h-4" />
-            </a>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-400 dark:text-white/40 hover:text-black dark:hover:text-white transition-colors"
+                aria-label={`Voir ${project.title}`}
+              >
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            )}
           </div>
         </div>
 
