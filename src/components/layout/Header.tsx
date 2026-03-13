@@ -56,11 +56,7 @@ export default function Header() {
               </>
             )}
             <Link to="/services" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.services}</Link>
-            {isHome ? (
-              <a href="#contact" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.contact}</a>
-            ) : (
-              <Link to="/#contact" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.contact}</Link>
-            )}
+            <Link to="/contact" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.contact}</Link>
           </nav>
 
           {/* Actions */}
@@ -80,21 +76,12 @@ export default function Header() {
             </button>
 
             {/* CTA desktop */}
-            {isHome ? (
-              <a
-                href="#contact"
-                className="hidden lg:inline-block px-6 py-3 text-xs font-semibold uppercase tracking-widest border border-black/20 dark:border-white/20 rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
-              >
-                {t.nav.hireMe}
-              </a>
-            ) : (
-              <Link
-                to="/#contact"
-                className="hidden lg:inline-block px-6 py-3 text-xs font-semibold uppercase tracking-widest border border-black/20 dark:border-white/20 rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
-              >
-                {t.nav.hireMe}
-              </Link>
-            )}
+            <Link
+              to="/contact"
+              className="hidden lg:inline-block px-6 py-3 text-xs font-semibold uppercase tracking-widest border border-black/20 dark:border-white/20 rounded-full hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+            >
+              {t.nav.hireMe}
+            </Link>
 
             {/* Hamburger mobile */}
             <button
@@ -165,43 +152,23 @@ export default function Header() {
                 >
                   {t.nav.services}
                 </Link>
-                {isHome ? (
-                  <a
-                    href="#contact"
-                    onClick={closeMenu}
-                    className="px-4 py-3 text-base font-medium text-gray-700 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/8 rounded-xl transition-colors"
-                  >
-                    {t.nav.contact}
-                  </a>
-                ) : (
-                  <Link
-                    to="/#contact"
-                    onClick={closeMenu}
-                    className="px-4 py-3 text-base font-medium text-gray-700 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/8 rounded-xl transition-colors"
-                  >
-                    {t.nav.contact}
-                  </Link>
-                )}
+                <Link
+                  to="/contact"
+                  onClick={closeMenu}
+                  className="px-4 py-3 text-base font-medium text-gray-700 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/8 rounded-xl transition-colors"
+                >
+                  {t.nav.contact}
+                </Link>
 
                 {/* CTA mobile */}
                 <div className="mt-3 pt-4 border-t border-black/8 dark:border-white/8">
-                  {isHome ? (
-                    <a
-                      href="#contact"
-                      onClick={closeMenu}
-                      className="block w-full py-3.5 text-center text-sm font-semibold uppercase tracking-widest rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
-                    >
-                      {t.nav.hireMe}
-                    </a>
-                  ) : (
-                    <Link
-                      to="/#contact"
-                      onClick={closeMenu}
-                      className="block w-full py-3.5 text-center text-sm font-semibold uppercase tracking-widest rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
-                    >
-                      {t.nav.hireMe}
-                    </Link>
-                  )}
+                  <Link
+                    to="/contact"
+                    onClick={closeMenu}
+                    className="block w-full py-3.5 text-center text-sm font-semibold uppercase tracking-widest rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-black/80 dark:hover:bg-white/90 transition-colors"
+                  >
+                    {t.nav.hireMe}
+                  </Link>
                 </div>
               </nav>
             </motion.div>

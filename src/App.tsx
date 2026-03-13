@@ -10,6 +10,7 @@ import Skills from './components/sections/Skills';
 import Process from './components/sections/Process';
 import Contact from './components/sections/Contact';
 import ServicesPricing from './components/pages/ServicesPricing';
+import ContactPage from './components/pages/Contact';
 
 function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -54,6 +55,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<ServicesPricing />} />
+              <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </main>
           <Footer />

@@ -53,7 +53,7 @@ export default function ServicesPricing() {
                 {service.stack}
               </p>
               <Link
-                to="/#contact"
+                to="/contact"
                 className={`mt-2 block w-full py-3 text-center rounded-full text-sm font-medium transition-colors ${
                   service.featured
                     ? 'bg-white text-black dark:bg-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900'

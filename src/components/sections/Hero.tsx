@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Github, Linkedin, ChevronDown, ArrowRight } from 'lucide-react';
 import { useTranslation } from '../../context/AppContext';
 
@@ -63,16 +64,19 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={fadeUpItem} className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <motion.a
-              href="#contact"
+            <motion.div
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-              className="btn-shine w-full sm:w-auto px-8 py-4 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium hover:bg-black/80 dark:hover:bg-white/90 transition-colors inline-flex items-center justify-center gap-2"
             >
-              {t.hero.btnContact}
-              <ArrowRight className="w-4 h-4" />
-            </motion.a>
+              <Link
+                to="/contact"
+                className="btn-shine w-full sm:w-auto px-8 py-4 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium hover:bg-black/80 dark:hover:bg-white/90 transition-colors inline-flex items-center justify-center gap-2"
+              >
+                {t.hero.btnContact}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
             <a
               href="#projets"
               className="w-full sm:w-auto px-8 py-4 border border-black/20 dark:border-white/20 rounded-full font-medium hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-white text-center"
