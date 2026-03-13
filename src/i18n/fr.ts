@@ -42,7 +42,7 @@ const fr = {
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop",
         tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
         metrics: ["2-6 semaines", "100% ownership", "Production-ready"],
-        link: "#",
+        //link: "#",
       },
       {
         id: 2,
@@ -52,7 +52,7 @@ const fr = {
         image: "/screenshots/Recoverlyai.png",
         tags: ["NestJS", "Next.js", "Supabase", "Claude API", "Shopify API"],
         metrics: ["1 811 tests", "30+ langues", "6 styles IA"],
-        link: "https://recoverlyai.fr/",
+        //link: "https://recoverlyai.fr/",
         video: "https://www.loom.com/share/652c461e31854134999913ba0a5a03f6"
       },
       {
@@ -63,7 +63,7 @@ const fr = {
         image: "/screenshots/NexusCreative.png",
         tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
         metrics: ["Production-ready"],
-        link: "https://nexus-yv43.onrender.com",
+        //link: "https://nexus-yv43.onrender.com",
         video: "https://www.loom.com/share/a4c78f8c45c644f99b4f4ee15c985a9f"
       },
       {
@@ -74,7 +74,7 @@ const fr = {
         image: "/screenshots/INTI.png",
         tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
         metrics: ["Production-ready"],
-        link: "https://inti-design.onrender.com",
+        //link: "https://inti-design.onrender.com",
         video: "https://www.loom.com/share/8f0d35a6166348b7870902467bfdc96e"
       },
       {
@@ -85,7 +85,7 @@ const fr = {
         image: "/screenshots/Eclat_Art.png",
         tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
         metrics: ["Production-ready"],
-        link: "https://eclat-d-art-galerie-privee-asma.onrender.com",
+        //link: "https://eclat-d-art-galerie-privee-asma.onrender.com",
         video: "https://www.loom.com/share/8cad9153580d4924ab8f788741bfb684"
       }
     ],

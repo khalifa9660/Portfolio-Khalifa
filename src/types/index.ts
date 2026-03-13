@@ -13,7 +13,7 @@ export interface ProjectItem {
   image: string;
   tags: string[];
   metrics: string[];
-  link: string;
+  link?: string;
   /** Lien vers la vidéo de démo (YouTube, Vimeo, ou lien direct .mp4) */
   video?: string;
 }
