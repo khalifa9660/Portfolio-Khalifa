@@ -4,7 +4,7 @@ import { useTranslation } from '../../context/AppContext';
 
 const fadeInItem = {
   hidden: { opacity: 0, x: 20 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } },
 };
 
 /** Section À propos — présentation personnelle et points forts */

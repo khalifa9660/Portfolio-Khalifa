@@ -14,6 +14,8 @@ export interface ProjectItem {
   tags: string[];
   metrics: string[];
   link: string;
+  /** Lien vers la vidéo de démo (YouTube, Vimeo, ou lien direct .mp4) */
+  video?: string;
 }
 
 /** Une catégorie de compétences techniques */
