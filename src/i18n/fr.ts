@@ -12,18 +12,18 @@ const fr = {
     role: "AI Product Builder",
     title1: "Je transforme ton idée",
     title2: "en produit qui tourne.",
-    desc: "Développeur fullstack basé en France. Je construis des MVPs SaaS fonctionnels en 2 à 4 semaines grâce à un workflow augmenté par l'IA. Stack moderne, livraison rapide, code production-ready.",
+    desc: "Développeur fullstack IA. Je construis des MVPs SaaS fonctionnels en 2 à 6 semaines pour que tu puisses lancer ton projet et récolter tes premiers euros. Livraison rapide garantie, code production-ready, suivi détaillé.",
     btnContact: "Discutons de ton projet",
     btnProjects: "Voir mes projets",
   },
   about: {
     subtitle: "À propos",
-    title: "Pas un dev classique.",
-    p1: "Je suis Khalifa, développeur fullstack et AI Product Builder basé en France. Je ne facture pas au temps passé — je construis des produits.",
-    p2: "Mon approche : comprendre ton besoin business, définir un scope serré, et livrer un MVP fonctionnel en 2 à 4 semaines. J'utilise l'IA (Claude Code) au quotidien pour coder plus vite sans sacrifier la qualité. Ce qui prend 1 à 2 mois chez une agence, je le livre en quelques semaines.",
-    p3: "Mon parcours m'a amené à travailler sur des projets Angular/C# en entreprise, à construire mon propre SaaS Shopify (RecoverlyAI), et à accompagner des fondateurs dans la création de leurs premiers produits.",
+    title: "Ton idée mérite d'être vue",
+    p1: "Je suis Khalifa, développeur fullstack et AI Product Builder. Je ne facture pas au temps passé — je construis ton idée en produit fonctionnel.",
+    p2: "Mon approche : comprendre ton besoin business, définir un scope serré, et livrer un MVP fonctionnel en 2 à 6 semaines. Mon expertise IA me permet d'optimiser chaque étape pour une livraison rapide et qualitative. N'attends plus pour donner vie à ton idée.",
+    p3: "Mon parcours m'a amené à construire des projets concrets, de mon propre SaaS Shopify (RecoverlyAI) à l'accompagnement de fondateurs dans la création de leurs premiers produits.",
     highlights: [
-      "Transformer une idée floue en app fonctionnelle",
+      "Transformer ton idée floue en app fonctionnelle",
       "Intégrer de l'IA dans des produits existants",
       "Construire des apps Shopify sur mesure",
       "Livrer vite, propre, déployé",
@@ -88,7 +88,7 @@ const fr = {
         num: "01",
         title: "Discovery Call",
         timing: "Jour 0",
-        desc: "30 minutes gratuites pour comprendre ton besoin, ton marché et tes priorités. On définit ensemble ce qui est essentiel dans le MVP vs ce qui peut attendre.",
+        desc: "30 minutes gratuites pour comprendre ton besoin, ton marché et tes priorités. On définit ensemble ce qui est essentiel dans le MVP.",
       },
       {
         num: "02",
@@ -99,18 +99,18 @@ const fr = {
       {
         num: "03",
         title: "Kickoff + Build",
-        timing: "Semaine 1-3",
-        desc: "Acompte de 50%, je setup le projet et je commence à construire. Point hebdomadaire chaque lundi, démo chaque vendredi. Tu vois l'avancement en temps réel.",
+        timing: "Semaine 1-4",
+        desc: "Acompte de 50%, je setup le projet et je commence à construire. Tu vois l'avancement en temps réel.",
       },
       {
         num: "04",
         title: "Livraison",
-        timing: "Semaine 3-4",
+        timing: "Semaine 4-6",
         desc: "App déployée en production, repo GitHub transféré, documentation technique. Tu es propriétaire de ton code à 100%.",
       },
     ],
     guarantees: [
-      "50% upfront, 50% à la livraison — pas de mauvaise surprise",
+      "50% upfront, 50% à la livraison",
       "Le code est à toi — repo GitHub transféré, tu en fais ce que tu veux",
       "Production-ready — déployé, SSL, documenté, prêt à accueillir des utilisateurs",
     ],
@@ -122,8 +122,8 @@ const fr = {
       {
         title: "MVP SaaS",
         price: "3 000 – 8 000€",
-        delay: "2-4 semaines",
-        desc: "App web complète prête à accueillir tes premiers utilisateurs. Auth (email + Google SSO), dashboard, 3-5 features core, paiements Stripe, déploiement production.",
+        delay: "2-6 semaines",
+        desc: "App web complète prête à accueillir tes premiers utilisateurs. Auth (email, dashboard, 3-5 features core, paiements Stripe, déploiement production.",
         stack: "Next.js · NestJS · Supabase · Stripe",
         featured: true,
       },
@@ -183,7 +183,7 @@ const fr = {
   },
   footer: {
     rights: "Tous droits réservés.",
-    tagline: "AI Product Builder · France",
+    tagline: "AI Product Builder",
   },
 };
 

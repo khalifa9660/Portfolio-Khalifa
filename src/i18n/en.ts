@@ -14,18 +14,18 @@ const en: Translation = {
     role: "AI Product Builder",
     title1: "I turn your idea",
     title2: "into a working product.",
-    desc: "Fullstack developer based in France. I build functional SaaS MVPs in 2 to 4 weeks with an AI-augmented workflow. Modern stack, fast delivery, production-ready code.",
+    desc: "Fullstack AI developer. I build functional SaaS MVPs in 2 to 6 weeks so you can launch your project and start earning your first revenue. Fast delivery guaranteed, production-ready code, detailed progress tracking.",
     btnContact: "Let's discuss your project",
     btnProjects: "View my projects",
   },
   about: {
     subtitle: "About",
-    title: "Not your average dev.",
-    p1: "I'm Khalifa, a fullstack developer and AI Product Builder based in France. I don't bill by the hour — I build products.",
-    p2: "My approach: understand your business need, define a tight scope, and deliver a functional MVP in 2 to 4 weeks. I use AI (Claude Code) daily to code faster without sacrificing quality. What takes an agency 1 to 2 months, I deliver in a few weeks.",
-    p3: "My background includes working on Angular/C# projects in a corporate setting, building my own Shopify SaaS (RecoverlyAI), and helping founders launch their first products.",
+    title: "Your idea deserves to be seen.",
+    p1: "I'm Khalifa, a fullstack developer and AI Product Builder. I don't bill by the hour — I turn your idea into a working product.",
+    p2: "My approach: understand your business need, define a tight scope, and deliver a functional MVP in 2 to 6 weeks. My AI expertise allows me to optimize every step for fast, high-quality delivery. Don't wait any longer to bring your idea to life.",
+    p3: "My background has led me to build real products, from my own Shopify SaaS (RecoverlyAI) to helping founders create their first products.",
     highlights: [
-      "Turn a vague idea into a working app",
+      "Turn your vague idea into a working app",
       "Integrate AI into existing products",
       "Build custom Shopify apps",
       "Deliver fast, clean, deployed",
@@ -53,7 +53,7 @@ const en: Translation = {
         description: "Fast-track MVP delivery for founders and early-stage startups. From idea to production-deployed product: auth, dashboards, Stripe integrations, databases — clean and documented code.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1715&auto=format&fit=crop",
         tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
-        metrics: ["2-4 weeks", "100% ownership", "Production-ready"],
+        metrics: ["2-6 weeks", "100% ownership", "Production-ready"],
         link: "#",
       },
     ],
@@ -90,7 +90,7 @@ const en: Translation = {
         num: "01",
         title: "Discovery Call",
         timing: "Day 0",
-        desc: "30 free minutes to understand your need, your market and your priorities. We define together what's essential in the MVP vs what can wait.",
+        desc: "30 free minutes to understand your need, your market and your priorities. We define together what's essential in the MVP.",
       },
       {
         num: "02",
@@ -101,13 +101,13 @@ const en: Translation = {
       {
         num: "03",
         title: "Kickoff + Build",
-        timing: "Week 1-3",
-        desc: "50% upfront, I set up the project and start building. Weekly check-in every Monday, demo every Friday. You see progress in real time.",
+        timing: "Week 1-4",
+        desc: "50% upfront, I set up the project and start building. You see progress in real time.",
       },
       {
         num: "04",
         title: "Delivery",
-        timing: "Week 3-4",
+        timing: "Week 4-6",
         desc: "App deployed in production, GitHub repo transferred, technical documentation. You own 100% of your code.",
       },
     ],
@@ -124,7 +124,7 @@ const en: Translation = {
       {
         title: "SaaS MVP",
         price: "€3,000 – €8,000",
-        delay: "2-4 weeks",
+        delay: "2-6 weeks",
         desc: "Complete web app ready for your first users. Auth (email + Google SSO), dashboard, 3-5 core features, Stripe payments, production deployment.",
         stack: "Next.js · NestJS · Supabase · Stripe",
         featured: true,
@@ -185,7 +185,7 @@ const en: Translation = {
   },
   footer: {
     rights: "All rights reserved.",
-    tagline: "AI Product Builder · France",
+    tagline: "AI Product Builder",
   },
 };
 
