@@ -34,7 +34,7 @@ interface AppProviderProps {
 /** Provider global : gère le thème et la langue de l'application */
 export function AppProvider({ children }: AppProviderProps) {
   const [theme, setTheme] = useState<Theme>('light');
-  const [lang, setLang] = useState<Lang>('fr');
+  const [lang, setLang] = useState<Lang>('en');
 
   useEffect(() => {
     if (theme === 'dark') {
