@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
 import { AppProvider } from './context/AppContext';
 import Header from './components/layout/Header';
@@ -11,6 +12,22 @@ import Process from './components/sections/Process';
 import Contact from './components/sections/Contact';
 import ServicesPricing from './components/pages/ServicesPricing';
 import ContactPage from './components/pages/Contact';
+
+/** Scroll vers l'ancre hash après navigation */
+function ScrollToHash() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }), 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+  return null;
+}
 
 function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -41,6 +58,7 @@ export default function App() {
     <AppProvider>
       <Router>
         <div className="min-h-screen bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white transition-colors duration-300 selection:bg-black/10 dark:selection:bg-white/20">
+          <ScrollToHash />
           <ScrollProgress />
           {/* Grain texture overlay — très subtil, feel premium */}
           <div
