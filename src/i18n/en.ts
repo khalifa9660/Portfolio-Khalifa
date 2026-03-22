@@ -85,6 +85,16 @@ const en: Translation = {
         metrics: ["Production-ready"],
         video: "https://www.loom.com/share/8cad9153580d4924ab8f788741bfb684",
       },
+      {
+        id: 6,
+        title: "Syra Cosmetics",
+        category: "Landing Page",
+        description: "Syra Cosmetics — High-Quality Cosmetics",
+        image: "/screenshots/SyraCosmetics.png",
+        tags: ["Next.js", "NestJS", "Supabase", "Stripe", "Vercel"],
+        metrics: ["Production-ready"],
+        video: "https://www.loom.com/share/d4623ee1f6184d46b843027a6cc450cf"
+      }
     ],
   },
   skills: {
