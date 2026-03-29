@@ -87,6 +87,39 @@
   }
 }
 
+/* ===== Tiptap Editor ===== */
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+.dark .tiptap p.is-editor-empty:first-child::before {
+  color: rgba(255, 255, 255, 0.3);
+}
+.tiptap {
+  outline: none;
+}
+.tiptap p {
+  margin-bottom: 0.5em;
+}
+.tiptap h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+  margin-top: 0.6em;
+}
+.tiptap ul, .tiptap ol {
+  padding-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+.tiptap ul { list-style-type: disc; }
+.tiptap ol { list-style-type: decimal; }
+.tiptap li { margin-bottom: 0.15em; }
+.tiptap strong { font-weight: 600; }
+.tiptap em { font-style: italic; }
+
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }

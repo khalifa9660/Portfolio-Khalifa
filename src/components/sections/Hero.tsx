@@ -48,7 +48,7 @@ export default function Hero() {
           {/* Titre principal */}
           <motion.h1
             variants={fadeUpItem}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium leading-[1.1] tracking-tight mb-8 text-gray-900 dark:text-white"
+            className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-[1.15] tracking-tight mb-8 text-gray-900 dark:text-white"
           >
             {t.hero.title1} <br className="hidden md:block" />
             <span className="italic-gradient italic">{t.hero.title2}</span>

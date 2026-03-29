@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, ArrowRight, ArrowLeft, Mail, Clock, Shield, Zap } from 'lucide-react';
 import { useTranslation } from '../../context/AppContext';
+import RichTextEditor from '../ui/RichTextEditor';
 
 interface ContactFormData {
   projectType: string;
@@ -197,12 +198,10 @@ function StepContact({ formData, setFormData, onNext, onBack, labels, placeholde
         />
       </div>
       <div>
-        <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-white/40 mb-2">{labels.message}</label>
-        <textarea
-          rows={4}
-          value={formData.message}
-          onChange={e => setFormData(previousData => ({ ...previousData, message: e.target.value }))}
-          className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/30 transition-colors resize-none"
+        <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-white/40 mb-3">{labels.message}</label>
+        <RichTextEditor
+          content={formData.message}
+          onChange={(html) => setFormData(previousData => ({ ...previousData, message: html }))}
           placeholder={placeholders.message}
         />
       </div>
@@ -301,7 +300,7 @@ function StepConfirm({ formData, onBack, onSend, submitted, successTitle, succes
         {formData.message && (
           <div className="pt-2 border-t border-black/5 dark:border-white/5">
             <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40 block mb-2">{t.contactPage.recapDescription}</span>
-            <p className="text-sm text-gray-700 dark:text-white/70 font-light leading-relaxed line-clamp-3">{formData.message}</p>
+            <div className="text-sm text-gray-700 dark:text-white/70 font-light leading-relaxed line-clamp-3 tiptap" dangerouslySetInnerHTML={{ __html: formData.message }} />
           </div>
         )}
       </div>
@@ -343,11 +342,18 @@ export default function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
 
+  const htmlToPlainText = (html: string): string => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    return tempDiv.textContent || tempDiv.innerText || '';
+  };
+
   const handleSend = () => {
     const selectedProjectType = t.contactPage.projectTypes.find(projectType => projectType.id === formData.projectType);
+    const plainMessage = htmlToPlainText(formData.message);
     const subject = encodeURIComponent(`[Portfolio] ${selectedProjectType?.label || formData.projectType} — ${formData.name}`);
     const body = encodeURIComponent(
-      `Nom: ${formData.name}\nEmail: ${formData.email}\nType de projet: ${selectedProjectType?.label || formData.projectType}\nBudget: ${formData.budget}\n\nDescription:\n${formData.message}`
+      `Nom: ${formData.name}\nEmail: ${formData.email}\nType de projet: ${selectedProjectType?.label || formData.projectType}\nBudget: ${formData.budget}\n\nDescription:\n${plainMessage}`
     );
     window.location.href = `mailto:${t.contactPage.emailContact}?subject=${subject}&body=${body}`;
     setSubmitted(true);
