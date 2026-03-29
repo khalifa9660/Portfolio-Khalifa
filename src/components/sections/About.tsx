@@ -24,7 +24,7 @@ export default function About() {
           <div className="space-y-5 text-gray-600 dark:text-white/60 font-light leading-relaxed">
             <p>{t.about.p1}</p>
             <p>{t.about.p2}</p>
-            <p>{t.about.p3}</p>
+            {t.about.p3 && <p>{t.about.p3}</p>}
           </div>
         </motion.div>
 

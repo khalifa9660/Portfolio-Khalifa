@@ -22,8 +22,8 @@ const en: Translation = {
     subtitle: "About",
     title: "I don't bill hours — I ship products.",
     p1: "I'm Khalifa, a fullstack developer and AI Product Builder. I'm not a typical freelancer — I'm your business accelerator.",
-    p2: "My approach: understand your business need, define a tight scope, and deliver a functional MVP in 2 to 6 weeks. My AI expertise lets me move 3x faster than traditional development. Stop waiting — your competitors aren't.",
-    p3: "My background has led me to build real products: my own Shopify SaaS (RecoverlyAI — 1,811 tests, submitted to the App Store) and helping founders launch their first products.",
+    p2: "My approach: understand your business need, define a tight scope, and deliver a functional MVP in 2 to 6 weeks. My AI expertise lets me move 3x faster than traditional development. I've built my own SaaS and I help founders launch theirs. Stop waiting — your competitors aren't.",
+    p3: "",
     highlights: [
       "Turn your vague idea into a working app",
       "Integrate AI into existing products",

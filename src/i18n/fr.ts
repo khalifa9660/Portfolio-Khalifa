@@ -20,8 +20,8 @@ const fr = {
     subtitle: "À propos",
     title: "Je ne facture pas des heures — je livre des produits.",
     p1: "Je suis Khalifa, développeur fullstack et AI Product Builder. Je ne suis pas un freelance classique — je suis ton accélérateur business.",
-    p2: "Mon approche : comprendre ton besoin business, définir un scope serré, et livrer un MVP fonctionnel en 2 à 6 semaines. Mon expertise IA me permet d'aller 3x plus vite qu'un développement classique. N'attends plus — tes concurrents n'attendent pas.",
-    p3: "Mon parcours m'a amené à construire des produits réels : mon propre SaaS Shopify (RecoverlyAI — 1 811 tests, soumis à l'App Store) et l'accompagnement de fondateurs dans le lancement de leurs premiers produits.",
+    p2: "Mon approche : comprendre ton besoin business, définir un scope serré, et livrer un MVP fonctionnel en 2 à 6 semaines. Mon expertise IA me permet d'aller 3x plus vite qu'un développement classique. J'ai construit mon propre SaaS et j'aide des fondateurs à lancer les leurs. N'attends plus — tes concurrents n'attendent pas.",
+    p3: "",
     highlights: [
       "Transformer ton idée floue en app fonctionnelle",
       "Intégrer de l'IA dans des produits existants",
