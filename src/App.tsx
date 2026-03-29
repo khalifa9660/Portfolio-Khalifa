@@ -9,7 +9,9 @@ import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
 import Process from './components/sections/Process';
-import Contact from './components/sections/Contact';
+import SocialProof from './components/sections/SocialProof';
+import Guarantee from './components/sections/Guarantee';
+import FinalCta from './components/sections/FinalCta';
 import ServicesPricing from './components/pages/ServicesPricing';
 import ContactPage from './components/pages/Contact';
 
@@ -45,10 +47,12 @@ function Home() {
     <>
       <Hero />
       <About />
+      <SocialProof />
       <Projects />
       <Skills />
       <Process />
-      <Contact />
+      <Guarantee />
+      <FinalCta />
     </>
   );
 }

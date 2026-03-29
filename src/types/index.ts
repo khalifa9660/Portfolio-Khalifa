@@ -40,4 +40,5 @@ export interface ServiceItem {
   desc: string;
   stack: string;
   featured: boolean;
+  badge: string;
 }

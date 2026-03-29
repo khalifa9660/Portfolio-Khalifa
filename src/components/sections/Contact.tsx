@@ -56,8 +56,8 @@ export default function Contact() {
             <div className="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-4">
               <Check className="w-8 h-8 text-green-500" />
             </div>
-            <p className="text-xl font-serif text-gray-900 dark:text-white">Message envoyé !</p>
-            <p className="text-gray-600 dark:text-white/60 mt-2">Je reviens vers toi sous 24h.</p>
+            <p className="text-xl font-serif text-gray-900 dark:text-white">{t.contact.fields.successTitle}</p>
+            <p className="text-gray-600 dark:text-white/60 mt-2">{t.contact.fields.successDesc}</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -70,7 +70,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={e => setFormData(previousData => ({ ...previousData, name: e.target.value }))}
                   className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/30 transition-colors"
-                  placeholder="Ton prénom"
+                  placeholder={t.contact.fields.namePlaceholder}
                 />
               </div>
               <div>
@@ -81,7 +81,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={e => setFormData(previousData => ({ ...previousData, email: e.target.value }))}
                   className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/30 transition-colors"
-                  placeholder="toi@exemple.com"
+                  placeholder={t.contact.fields.emailPlaceholder}
                 />
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Contact() {
                   onChange={e => setFormData(previousData => ({ ...previousData, projectType: e.target.value }))}
                   className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white transition-colors appearance-none"
                 >
-                  <option value="" className="bg-white dark:bg-[#050505]">— Choisir —</option>
+                  <option value="" className="bg-white dark:bg-[#050505]">{t.contact.fields.selectPlaceholder}</option>
                   {t.contact.fields.projectTypeOptions.map(option => (
                     <option key={option} value={option} className="bg-white dark:bg-[#050505]">{option}</option>
                   ))}
@@ -107,7 +107,7 @@ export default function Contact() {
                   onChange={e => setFormData(previousData => ({ ...previousData, budget: e.target.value }))}
                   className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white transition-colors appearance-none"
                 >
-                  <option value="" className="bg-white dark:bg-[#050505]">— Choisir —</option>
+                  <option value="" className="bg-white dark:bg-[#050505]">{t.contact.fields.selectPlaceholder}</option>
                   {t.contact.fields.budgetOptions.map(option => (
                     <option key={option} value={option} className="bg-white dark:bg-[#050505]">{option}</option>
                   ))}
@@ -123,7 +123,7 @@ export default function Contact() {
                 value={formData.message}
                 onChange={e => setFormData(previousData => ({ ...previousData, message: e.target.value }))}
                 className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/30 transition-colors resize-none"
-                placeholder="Décris ton projet, tes objectifs, ce que tu as déjà..."
+                placeholder={t.contact.fields.messagePlaceholder}
               />
             </div>
 

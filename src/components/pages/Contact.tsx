@@ -86,6 +86,7 @@ interface StepProjectProps {
 }
 
 function StepProject({ formData, setFormData, onNext, projectTypes, budgets, nextBtn }: StepProjectProps) {
+  const t = useTranslation();
   return (
     <motion.div
       key="step1"
@@ -98,7 +99,7 @@ function StepProject({ formData, setFormData, onNext, projectTypes, budgets, nex
       {/* Type de projet */}
       <div>
         <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-white/40 mb-4">
-          Type de projet
+          {t.contactPage.projectTypeLabel}
         </label>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {projectTypes.map((projectType) => (
@@ -126,14 +127,14 @@ function StepProject({ formData, setFormData, onNext, projectTypes, budgets, nex
       {/* Budget */}
       <div>
         <label className="block text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-white/40 mb-2">
-          Budget estimé
+          {t.contactPage.budgetLabel}
         </label>
         <select
           value={formData.budget}
           onChange={e => setFormData(previousData => ({ ...previousData, budget: e.target.value }))}
           className="w-full px-0 py-3 bg-transparent border-b border-black/20 dark:border-white/20 focus:border-black dark:focus:border-white outline-none text-gray-900 dark:text-white transition-colors appearance-none cursor-pointer"
         >
-          <option value="" className="bg-white dark:bg-[#050505]">— Choisir —</option>
+          <option value="" className="bg-white dark:bg-[#050505]">{t.contactPage.selectPlaceholder}</option>
           {budgets.map(budgetOption => (
             <option key={budgetOption} value={budgetOption} className="bg-white dark:bg-[#050505]">
               {budgetOption}
@@ -241,6 +242,7 @@ interface StepConfirmProps {
 }
 
 function StepConfirm({ formData, onBack, onSend, submitted, successTitle, successDesc, sendBtn, backBtn, emailContact, projectTypes }: StepConfirmProps) {
+  const t = useTranslation();
   const selectedProjectType = projectTypes.find(projectType => projectType.id === formData.projectType);
 
   if (submitted) {
@@ -277,35 +279,35 @@ function StepConfirm({ formData, onBack, onSend, submitted, successTitle, succes
       {/* Récapitulatif */}
       <div className="p-6 rounded-2xl bg-black/3 dark:bg-white/3 border border-black/5 dark:border-white/5 space-y-4">
         <div className="flex justify-between items-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">Projet</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">{t.contactPage.recapProject}</span>
           <span className="text-sm font-medium text-gray-900 dark:text-white">
             {selectedProjectType ? `${selectedProjectType.icon} ${selectedProjectType.label}` : '—'}
           </span>
         </div>
         {formData.budget && (
           <div className="flex justify-between items-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">Budget</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">{t.contactPage.recapBudget}</span>
             <span className="text-sm font-medium text-gray-900 dark:text-white">{formData.budget}</span>
           </div>
         )}
         <div className="flex justify-between items-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">Nom</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">{t.contactPage.recapName}</span>
           <span className="text-sm font-medium text-gray-900 dark:text-white">{formData.name}</span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">Email</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40">{t.contactPage.recapEmail}</span>
           <span className="text-sm font-medium text-gray-900 dark:text-white">{formData.email}</span>
         </div>
         {formData.message && (
           <div className="pt-2 border-t border-black/5 dark:border-white/5">
-            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40 block mb-2">Description</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-white/40 block mb-2">{t.contactPage.recapDescription}</span>
             <p className="text-sm text-gray-700 dark:text-white/70 font-light leading-relaxed line-clamp-3">{formData.message}</p>
           </div>
         )}
       </div>
 
       <p className="text-xs text-gray-400 dark:text-white/30">
-        Sera envoyé à : <a href={`mailto:${emailContact}`} className="underline hover:text-gray-600 dark:hover:text-white/60 transition-colors">{emailContact}</a>
+        {t.contactPage.recapSentTo} <a href={`mailto:${emailContact}`} className="underline hover:text-gray-600 dark:hover:text-white/60 transition-colors">{emailContact}</a>
       </p>
 
       <div className="flex items-center gap-4">

@@ -5,23 +5,23 @@ const fr = {
     skills: "Stack",
     services: "Services & Tarifs",
     contact: "Contact",
-    hireMe: "Discutons",
+    hireMe: "Me contacter",
   },
   hero: {
     available: "🟢 Disponible pour missions",
     role: "AI Product Builder",
-    title1: "Je transforme ton idée",
-    title2: "en produit qui tourne.",
-    desc: "Développeur fullstack IA. Je construis des MVPs SaaS fonctionnels en 2 à 6 semaines pour que tu puisses lancer ton projet et récolter tes premiers euros. Livraison rapide garantie, code production-ready, suivi détaillé.",
+    title1: "Ton MVP SaaS livré en 2 à 6 semaines",
+    title2: "— prêt à lancer, pas juste du code.",
+    desc: "Je transforme ton idée en produit fonctionnel avec auth, paiements, IA et déploiement — pour que tu aies tes premiers utilisateurs rapidement.",
     btnContact: "Discutons de ton projet",
     btnProjects: "Voir mes projets",
   },
   about: {
     subtitle: "À propos",
-    title: "Ton idée mérite d'être vue",
-    p1: "Je suis Khalifa, développeur fullstack et AI Product Builder. Je ne facture pas au temps passé — je construis ton idée en produit fonctionnel.",
-    p2: "Mon approche : comprendre ton besoin business, définir un scope serré, et livrer un MVP fonctionnel en 2 à 6 semaines. Mon expertise IA me permet d'optimiser chaque étape pour une livraison rapide et qualitative. N'attends plus pour donner vie à ton idée.",
-    p3: "Mon parcours m'a amené à construire des projets concrets, de mon propre SaaS Shopify (RecoverlyAI) à l'accompagnement de fondateurs dans la création de leurs premiers produits.",
+    title: "Je ne facture pas des heures — je livre des produits.",
+    p1: "Je suis Khalifa, développeur fullstack et AI Product Builder. Je ne suis pas un freelance classique — je suis ton accélérateur business.",
+    p2: "Mon approche : comprendre ton besoin business, définir un scope serré, et livrer un MVP fonctionnel en 2 à 6 semaines. Mon expertise IA me permet d'aller 3x plus vite qu'un développement classique. N'attends plus — tes concurrents n'attendent pas.",
+    p3: "Mon parcours m'a amené à construire des produits réels : mon propre SaaS Shopify (RecoverlyAI — 1 811 tests, soumis à l'App Store) et l'accompagnement de fondateurs dans le lancement de leurs premiers produits.",
     highlights: [
       "Transformer ton idée floue en app fonctionnelle",
       "Intégrer de l'IA dans des produits existants",
@@ -33,6 +33,8 @@ const fr = {
   projects: {
     subtitle: "Réalisations",
     title: "Projets Récents",
+    demo: "Démo",
+    demoTitle: "Démo projet",
     items: [
       {
         id: 1,
@@ -125,9 +127,9 @@ const fr = {
     steps: [
       {
         num: "01",
-        title: "Discovery Call",
+        title: "Premier échange",
         timing: "Jour 0",
-        desc: "30 minutes gratuites pour comprendre ton besoin, ton marché et tes priorités. On définit ensemble ce qui est essentiel dans le MVP.",
+        desc: "Tu m'écris, je te réponds sous 24h. On échange par écrit pour comprendre ton besoin, ton marché et tes priorités. On définit ensemble ce qui est essentiel dans le MVP.",
       },
       {
         num: "02",
@@ -148,6 +150,7 @@ const fr = {
         desc: "App déployée en production, repo GitHub transféré, documentation technique. Tu es propriétaire de ton code à 100%.",
       },
     ],
+    guaranteesTitle: "Garanties",
     guarantees: [
       "50% upfront, 50% à la livraison",
       "Le code est à toi — repo GitHub transféré, tu en fais ce que tu veux",
@@ -162,9 +165,10 @@ const fr = {
         title: "MVP SaaS",
         price: "3 000 – 8 000€",
         delay: "2-6 semaines",
-        desc: "App web complète prête à accueillir tes premiers utilisateurs. Auth (email, dashboard, 3-5 features core, paiements Stripe, déploiement production.",
+        desc: "App web complète prête à accueillir tes premiers utilisateurs. Auth, dashboard, 3-5 features core, paiements Stripe, déploiement production. Tu lances et tu vends dès la livraison.",
         stack: "Next.js · NestJS · Supabase · Stripe",
         featured: true,
+        badge: "Le plus populaire",
       },
       {
         title: "Intégration IA",
@@ -173,6 +177,7 @@ const fr = {
         desc: "J'intègre de l'IA dans ton produit existant. Chatbot, génération de contenu, classification, emails personnalisés. Pipeline de prompts optimisés et testés.",
         stack: "Claude API · OpenAI · NestJS · Prompt Engineering",
         featured: false,
+        badge: "",
       },
       {
         title: "App Shopify Custom",
@@ -181,6 +186,7 @@ const fr = {
         desc: "App Shopify sur mesure de A à Z. OAuth, webhooks, dashboard marchand intégré, soumission App Store. J'ai construit ma propre app Shopify — je connais le processus de bout en bout.",
         stack: "Shopify API · Next.js · NestJS · Supabase",
         featured: false,
+        badge: "",
       },
       {
         title: "Sprint Technique / Rescue",
@@ -189,6 +195,7 @@ const fr = {
         desc: "Ton projet est bloqué, buggé ou mal architecturé ? J'interviens en mode pompier : audit complet, fix des bugs critiques, refactoring, stack clean.",
         stack: "Audit · Refactoring · CI/CD · Tests",
         featured: false,
+        badge: "",
       },
     ],
     tjm: "TJM (missions courtes)",
@@ -216,6 +223,12 @@ const fr = {
       budgetOptions: ["1 000 – 3 000€", "3 000 – 5 000€", "5 000 – 10 000€", "10 000€+"],
       message: "Décris ton projet *",
       submit: "Envoyer mon projet",
+      namePlaceholder: "Ton prénom",
+      emailPlaceholder: "toi@exemple.com",
+      messagePlaceholder: "Décris ton projet, tes objectifs, ce que tu as déjà...",
+      selectPlaceholder: "— Choisir —",
+      successTitle: "Message envoyé !",
+      successDesc: "Je reviens vers toi sous 24h.",
     },
     email: "khalifatambadou.dev@gmail.com",
     emailLabel: "Ou écris-moi directement",
@@ -256,6 +269,38 @@ const fr = {
     emailContact: "khalifatambadou.dev@gmail.com",
     emailContactLabel: "Ou écris-moi directement",
     responseTime: "Réponse sous 24h",
+    projectTypeLabel: "Type de projet",
+    budgetLabel: "Budget estimé",
+    selectPlaceholder: "— Choisir —",
+    recapProject: "Projet",
+    recapBudget: "Budget",
+    recapName: "Nom",
+    recapEmail: "Email",
+    recapDescription: "Description",
+    recapSentTo: "Sera envoyé à :",
+  },
+  finalCta: {
+    title: "Prêt à lancer ton projet ?",
+    desc: "Décris-moi ton idée, je te réponds sous 24h avec une proposition concrète.",
+    btn: "Discutons de ton projet",
+  },
+  socialProof: {
+    subtitle: "Résultats",
+    items: [
+      { value: "5+", label: "MVPs livrés" },
+      { value: "2-6", label: "semaines en moyenne" },
+      { value: "1 811", label: "tests sur RecoverlyAI" },
+      { value: "100%", label: "propriété du code" },
+    ],
+  },
+  guarantee: {
+    subtitle: "Garanties",
+    title: "Satisfait ou je corrige — livraison production-ready garantie.",
+    cards: [
+      { icon: "🔒", title: "100% ton code", desc: "Repo GitHub transféré, tu en fais ce que tu veux. Aucun lock-in." },
+      { icon: "🚀", title: "Un produit, pas un prototype", desc: "Déployé, testé, documenté — prêt à accueillir tes premiers utilisateurs." },
+      { icon: "⚡", title: "Réponse sous 24h", desc: "Tu ne resteras jamais sans nouvelles. Communication claire et rapide." },
+    ],
   },
   footer: {
     rights: "Tous droits réservés.",

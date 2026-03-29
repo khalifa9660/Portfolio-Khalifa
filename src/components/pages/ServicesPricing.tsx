@@ -33,6 +33,15 @@ export default function ServicesPricing() {
                   : 'bg-white dark:bg-white/5 border-black/5 dark:border-white/5 shadow-sm hover:shadow-md dark:hover:border-white/10'
               }`}
             >
+              {service.badge && (
+                <span className={`inline-block w-auto px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full mb-3 ${
+                  service.featured
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
+                    : 'bg-black/10 dark:bg-white/10 text-gray-700 dark:text-white/70'
+                }`}>
+                  {service.badge}
+                </span>
+              )}
               <div className="flex items-start justify-between gap-4">
                 <h4 className="text-xl font-serif">{service.title}</h4>
                 <span className={`text-xs font-mono px-3 py-1 rounded-full flex-shrink-0 ${

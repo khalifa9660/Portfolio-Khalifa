@@ -102,6 +102,7 @@ function ProjectCard({ project, index, onPlayVideo }: {
   index: number;
   onPlayVideo: (url: string) => void;
 }) {
+  const t = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -160,7 +161,7 @@ function ProjectCard({ project, index, onPlayVideo }: {
                 aria-label="Voir la démo vidéo"
               >
                 <Play className="w-3.5 h-3.5" fill="currentColor" />
-                Démo
+                {t.projects.demo}
               </button>
             )}
             {project.link && (
@@ -233,7 +234,7 @@ export default function Projects() {
         {activeVideoUrl && (
           <VideoModal
             url={activeVideoUrl}
-            title="Démo projet"
+            title={t.projects.demoTitle}
             onClose={() => setActiveVideoUrl(null)}
           />
         )}

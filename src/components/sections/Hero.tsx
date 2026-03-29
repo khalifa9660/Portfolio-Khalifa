@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, ChevronDown, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, ArrowRight } from 'lucide-react';
 import { useTranslation } from '../../context/AppContext';
 
 const staggerContainer = {
@@ -17,7 +17,7 @@ const fadeUpItem = {
 export default function Hero() {
   const t = useTranslation();
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 overflow-hidden">
       {/* Animated ambient blobs */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/10 rounded-full blur-[120px] animate-blob" />
@@ -71,7 +71,7 @@ export default function Hero() {
             >
               <Link
                 to="/contact"
-                className="btn-shine w-full sm:w-auto px-8 py-4 bg-black text-white dark:bg-white dark:text-black rounded-full font-medium hover:bg-black/80 dark:hover:bg-white/90 transition-colors inline-flex items-center justify-center gap-2"
+                className="btn-shine w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-medium hover:from-blue-700 hover:to-purple-700 transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
               >
                 {t.hero.btnContact}
                 <ArrowRight className="w-4 h-4" />
@@ -106,13 +106,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-400 dark:text-white/30"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <ChevronDown className="w-6 h-6" />
-      </motion.div>
     </section>
   );
 }

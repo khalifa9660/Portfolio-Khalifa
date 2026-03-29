@@ -41,7 +41,7 @@ export default function Process() {
         transition={{ duration: 0.6 }}
         className="p-8 md:p-10 rounded-2xl bg-black dark:bg-white text-white dark:text-black"
       >
-        <h4 className="text-lg font-semibold mb-6 opacity-80">Garanties</h4>
+        <h4 className="text-lg font-semibold mb-6 opacity-80">{t.process.guaranteesTitle}</h4>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {t.process.guarantees.map((guarantee, index) => (
             <li key={index} className="flex items-start gap-3">

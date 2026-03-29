@@ -34,10 +34,10 @@ export default function Header() {
     <>
       <div className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-6 pointer-events-none">
         <header
-          className={`pointer-events-auto flex items-center justify-between w-full max-w-7xl px-6 py-4 md:px-12 md:py-5 backdrop-blur-xl bg-white/80 dark:bg-[#111111]/80 border border-black/10 dark:border-white/10 rounded-full transition-all duration-500 ${
+          className={`pointer-events-auto flex items-center justify-between w-full max-w-7xl rounded-full transition-all duration-500 ${
             scrolled
-              ? 'shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_40px_rgba(0,0,0,0.5)]'
-              : 'shadow-sm'
+              ? 'px-4 py-2 md:px-8 md:py-3 backdrop-blur-md bg-white/50 dark:bg-[#111111]/50 border border-black/5 dark:border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)]'
+              : 'px-6 py-4 md:px-12 md:py-5 backdrop-blur-xl bg-white/80 dark:bg-[#111111]/80 border border-black/10 dark:border-white/10 shadow-sm'
           }`}
         >
           {/* Logo */}
