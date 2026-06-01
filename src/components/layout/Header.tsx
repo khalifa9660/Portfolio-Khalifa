@@ -49,8 +49,8 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-12 text-sm font-medium text-gray-600 dark:text-white/70">
             <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.home}</Link>
             <Link to="/#projets" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.projects}</Link>
+            <Link to="/#parcours" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.parcours}</Link>
             <Link to="/#competences" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.skills}</Link>
-            <Link to="/services" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.services}</Link>
             <Link to="/contact" className="hover:text-black dark:hover:text-white transition-colors">{t.nav.contact}</Link>
           </nav>
 
@@ -130,18 +130,18 @@ export default function Header() {
                   {t.nav.projects}
                 </Link>
                 <Link
+                  to="/#parcours"
+                  onClick={closeMenu}
+                  className="px-4 py-3 text-base font-medium text-gray-700 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/8 rounded-xl transition-colors"
+                >
+                  {t.nav.parcours}
+                </Link>
+                <Link
                   to="/#competences"
                   onClick={closeMenu}
                   className="px-4 py-3 text-base font-medium text-gray-700 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/8 rounded-xl transition-colors"
                 >
                   {t.nav.skills}
-                </Link>
-                <Link
-                  to="/services"
-                  onClick={closeMenu}
-                  className="px-4 py-3 text-base font-medium text-gray-700 dark:text-white/80 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/8 rounded-xl transition-colors"
-                >
-                  {t.nav.services}
                 </Link>
                 <Link
                   to="/contact"

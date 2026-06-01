@@ -24,21 +24,10 @@ export interface SkillCategory {
   skills: string[];
 }
 
-/** Une étape du processus de travail */
-export interface ProcessStep {
+/** Une entrée de la frise Parcours (expérience ou formation) */
+export interface ExperienceStep {
   num: string;
   title: string;
   timing: string;
   desc: string;
-}
-
-/** Un service / offre tarifaire */
-export interface ServiceItem {
-  title: string;
-  price: string;
-  delay: string;
-  desc: string;
-  stack: string;
-  featured: boolean;
-  badge: string;
 }

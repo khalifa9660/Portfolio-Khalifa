@@ -11,8 +11,8 @@ const fadeUpItem = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] } },
 };
 
-/** Section garanties — promesse forte et cartes de confiance */
-export default function Guarantee() {
+/** Section Réalisations notables — bloc inversé mettant en avant les faits marquants */
+export default function Highlights() {
   const t = useTranslation();
 
   return (
@@ -28,15 +28,15 @@ export default function Guarantee() {
         >
           {/* Subtitle */}
           <h2 className="text-sm font-medium text-white/50 dark:text-black/50 uppercase tracking-[0.2em] mb-6">
-            {t.guarantee.subtitle}
+            {t.highlights.subtitle}
           </h2>
 
-          {/* Promesse forte */}
+          {/* Titre fort */}
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white dark:text-black leading-tight mb-16 max-w-3xl">
-            {t.guarantee.title}
+            {t.highlights.title}
           </h3>
 
-          {/* Cartes garantie */}
+          {/* Cartes réalisations */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -44,7 +44,7 @@ export default function Guarantee() {
             viewport={{ once: true, margin: '-40px' }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {t.guarantee.cards.map((card, index) => (
+            {t.highlights.cards.map((card, index) => (
               <motion.div
                 key={index}
                 variants={fadeUpItem}

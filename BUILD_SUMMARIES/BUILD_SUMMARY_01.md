@@ -111,3 +111,45 @@ npm run build     # ✅ Build réussi en 2.76s
 - **Maintenabilité** : chaque composant dans son propre fichier
 - **i18n** : parité FR/EN garantie par TypeScript
 - **DX** : imports propres, séparation des responsabilités claire
+
+---
+
+# Transformation en portfolio professionnel (2026-06-01)
+
+## Objectif
+Transformer la landing de vente freelance en **portfolio professionnel** (recherche d'opportunités), sans pricing ni choix de service, en gardant le design et les vidéos. Contenu repris du CV de Khalifa Tambadou. Langue par défaut → français.
+
+## Ce qui a été fait
+
+### Contenu (i18n `fr.ts` + `en.ts`)
+- Réécriture complète de tous les textes en registre professionnel (« vous »).
+- `hero` : « Développeur Full-Stack · Spécialiste Agentic AI », badge « Disponible pour de nouvelles opportunités ».
+- `about` (Profil), `socialProof` (3 ans / 2 SaaS / 1685 tests / 38+ langues).
+- `projects` : **ajout d'AudySpark**, RecoverlyAI mis à jour (1685 tests, 38+ langues, Shopify App Store) + liens externes recoverlyai.fr / audyspark.com. **Vidéos Loom conservées**.
+- `skills` : 4 catégories alignées CV (Backend & Architecture, Frontend, AI Engineering, CRO & Intégrations).
+- Renommage de clés : `process` → `experience` (frise Parcours : Founder Solo, VIR by JP, formation RNCP + bloc Langues), `guarantee` → `highlights` (Réalisations notables).
+- Suppression des blocs `services` et `contact` (sidebar). Simplification de `contactPage` (plus de budget ni type de projet).
+
+### Structure (code)
+- Composants renommés : `Process.tsx` → `Experience.tsx` (id `process` → `parcours`), `Guarantee.tsx` → `Highlights.tsx`.
+- `App.tsx` : suppression de la route `/services`, nouvelle composition Home (Hero → About → SocialProof → Projects → Skills → Experience → Highlights → FinalCta).
+- `Header.tsx` : retrait du lien Services, ajout du lien Parcours (`/#parcours`). Nav : Accueil · Projets · Parcours · Stack · Contact.
+- `pages/Contact.tsx` : wizard 3 étapes remplacé par un **formulaire simple Nom / Email / Message** → `mailto:khalifa.96@hotmail.fr` ; téléphone +33 6 65 42 78 63 affiché.
+- `Footer.tsx` : liens Twitter/X et Malt remplacés par RecoverlyAI et AudySpark (LinkedIn + GitHub conservés).
+- `AppContext.tsx` : langue par défaut `'fr'`.
+- `index.html` : `lang="fr"`, nouveau `<title>` + `<meta description>`.
+
+### Suppressions
+- `pages/ServicesPricing.tsx` et `sections/Contact.tsx` (supprimés via `git rm`).
+- `types/index.ts` : interface `ServiceItem` retirée, `ProcessStep` renommée `ExperienceStep`.
+
+## Points d'attention
+- **AudySpark** utilise une image placeholder Unsplash — à remplacer par une vraie capture `public/screenshots/AudySpark.png`.
+- `src/components/ui/RichTextEditor.tsx` n'est plus utilisé (l'ancien wizard l'employait) — conservé comme composant réutilisable.
+
+## Vérification
+```bash
+npx tsc --noEmit  # ✅ 0 erreur (parité FR/EN validée)
+npm run build     # ✅ built in 1.75s — dist/assets/index-BVRXkWjv.js 421.31 kB │ gzip 132.22 kB
+```
+- ⚠️ Vérification visuelle navigateur non effectuée (extension Claude in Chrome non connectée) — à valider manuellement : langue FR par défaut, toggle EN, vidéos Loom, ancres #projets/#parcours/#competences, formulaire contact, dark mode, responsive.

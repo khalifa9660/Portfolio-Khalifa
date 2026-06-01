@@ -8,11 +8,10 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Skills from './components/sections/Skills';
-import Process from './components/sections/Process';
+import Experience from './components/sections/Experience';
 import SocialProof from './components/sections/SocialProof';
-import Guarantee from './components/sections/Guarantee';
+import Highlights from './components/sections/Highlights';
 import FinalCta from './components/sections/FinalCta';
-import ServicesPricing from './components/pages/ServicesPricing';
 import ContactPage from './components/pages/Contact';
 
 /** Scroll vers l'ancre hash après navigation */
@@ -50,8 +49,8 @@ function Home() {
       <SocialProof />
       <Projects />
       <Skills />
-      <Process />
-      <Guarantee />
+      <Experience />
+      <Highlights />
       <FinalCta />
     </>
   );
@@ -76,7 +75,6 @@ export default function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/services" element={<ServicesPricing />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </main>

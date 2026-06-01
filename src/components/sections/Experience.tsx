@@ -2,18 +2,18 @@ import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
 import { useTranslation } from '../../context/AppContext';
 
-/** Section Process — étapes de collaboration et garanties */
-export default function Process() {
+/** Section Parcours — frise expérience professionnelle + formation, et bloc Langues */
+export default function Experience() {
   const t = useTranslation();
   return (
-    <section id="process" className="py-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="parcours" className="py-32 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="mb-20">
-        <h2 className="text-sm font-medium text-gray-500 dark:text-white/50 uppercase tracking-[0.2em] mb-4">{t.process.subtitle}</h2>
-        <h3 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white">{t.process.title}</h3>
+        <h2 className="text-sm font-medium text-gray-500 dark:text-white/50 uppercase tracking-[0.2em] mb-4">{t.experience.subtitle}</h2>
+        <h3 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white">{t.experience.title}</h3>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {t.process.steps.map((step, index) => (
+        {t.experience.steps.map((step, index) => (
           <motion.div
             key={step.num}
             initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ export default function Process() {
         ))}
       </div>
 
-      {/* Bloc garanties */}
+      {/* Bloc Langues & disponibilité */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,12 +41,12 @@ export default function Process() {
         transition={{ duration: 0.6 }}
         className="p-8 md:p-10 rounded-2xl bg-black dark:bg-white text-white dark:text-black"
       >
-        <h4 className="text-lg font-semibold mb-6 opacity-80">{t.process.guaranteesTitle}</h4>
+        <h4 className="text-lg font-semibold mb-6 opacity-80">{t.experience.extraTitle}</h4>
         <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {t.process.guarantees.map((guarantee, index) => (
+          {t.experience.extra.map((item, index) => (
             <li key={index} className="flex items-start gap-3">
               <Check className="w-5 h-5 flex-shrink-0 mt-0.5 opacity-80" />
-              <span className="font-light opacity-80 text-sm leading-relaxed">{guarantee}</span>
+              <span className="font-light opacity-80 text-sm leading-relaxed">{item}</span>
             </li>
           ))}
         </ul>
