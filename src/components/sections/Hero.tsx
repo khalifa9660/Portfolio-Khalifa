@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, ArrowRight, Download } from 'lucide-react';
 import { useTranslation } from '../../context/AppContext';
 
 const staggerContainer = {
@@ -50,7 +50,7 @@ export default function Hero() {
             variants={fadeUpItem}
             className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium leading-[1.15] tracking-tight mb-8 text-gray-900 dark:text-white"
           >
-            {t.hero.title1} <br className="hidden md:block" />
+            {t.hero.title1}{' '}<br className="hidden md:block" />
             <span className="italic-gradient italic">{t.hero.title2}</span>
           </motion.h1>
 
@@ -63,7 +63,7 @@ export default function Hero() {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div variants={fadeUpItem} className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <motion.div variants={fadeUpItem} className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 sm:gap-4">
             <motion.div
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
@@ -83,10 +83,18 @@ export default function Hero() {
             >
               {t.hero.btnProjects}
             </a>
+            <a
+              href="/CV_Software_engineer_Khalifa_Tambadou.pdf"
+              download
+              className="w-full sm:w-auto px-8 py-4 border border-black/20 dark:border-white/20 rounded-full font-medium hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-white inline-flex items-center justify-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              {t.hero.btnResume}
+            </a>
             {/* Icônes sociales groupées pour éviter le wrapping incohérent */}
             <div className="flex items-center gap-3">
               <a
-                href="https://github.com/khalifatambadou"
+                href="https://github.com/khalifa9660"
                 target="_blank"
                 rel="noreferrer"
                 className="p-4 border border-black/20 dark:border-white/20 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-gray-700 dark:text-white"

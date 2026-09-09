@@ -2,18 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ExternalLink, Play, X } from 'lucide-react';
 import { useTranslation } from '../../context/AppContext';
-
-type ProjectItem = {
-  id: number;
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-  tags: string[];
-  metrics: string[];
-  link?: string;
-  video?: string;
-};
+import type { ProjectItem } from '../../types';
 
 /**
  * Transforme une URL vidéo en URL embed.
@@ -205,6 +194,8 @@ function ProjectCard({ project, index, onPlayVideo }: {
 export default function Projects() {
   const t = useTranslation();
   const [activeVideoUrl, setActiveVideoUrl] = useState<string | null>(null);
+  const personalProjects = t.projects.items.filter(project => project.featured);
+  const otherProjects = t.projects.items.filter(project => !project.featured);
 
   return (
     <>
@@ -218,8 +209,25 @@ export default function Projects() {
           </h3>
         </div>
 
+        <h4 className="text-xs font-semibold text-gray-500 dark:text-white/50 uppercase tracking-[0.2em] mb-8">
+          {t.projects.personalTitle}
+        </h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-24">
+          {personalProjects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              onPlayVideo={setActiveVideoUrl}
+            />
+          ))}
+        </div>
+
+        <h4 className="text-xs font-semibold text-gray-500 dark:text-white/50 uppercase tracking-[0.2em] mb-8">
+          {t.projects.otherTitle}
+        </h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-          {t.projects.items.map((project, index) => (
+          {otherProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}

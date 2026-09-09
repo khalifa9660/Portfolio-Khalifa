@@ -153,3 +153,63 @@ npx tsc --noEmit  # ✅ 0 erreur (parité FR/EN validée)
 npm run build     # ✅ built in 1.75s — dist/assets/index-BVRXkWjv.js 421.31 kB │ gzip 132.22 kB
 ```
 - ⚠️ Vérification visuelle navigateur non effectuée (extension Claude in Chrome non connectée) — à valider manuellement : langue FR par défaut, toggle EN, vidéos Loom, ancres #projets/#parcours/#competences, formulaire contact, dark mode, responsive.
+
+---
+
+# Lot 2 · Vitrine « Sprint IA en production » (2026-09-02)
+
+Étape D du plan `~/.claude/plans/tu-es-expert-en-bright-kurzweil.md`. Source unique des prix : `~/.claude/skills/ciblesMissions/OFFRE.md` ; source unique des chiffres et de la chronologie : `~/.claude/skills/ciblesCDI/PROFIL.md`.
+
+## Contenu (i18n FR + EN synchronisés)
+- Nouveau bloc `services` (sous-titre, titre, intro, 3 paliers name/price/duration/desc/features, note, cta) : Diagnostic 1 500 € HT · Sprint 9 000 € HT · Maintenance 1 800 € HT / mois. Clé `nav.services`.
+- Réalisation **Folomi Paris** (id 8, capture `public/screenshots/Folomi_Paris.jpg` dérivée de `couverture.webp`, 1600 px).
+- « RecoverlyAI » → « Breyvio (ex-RecoverlyAI) », liens `recoverlyai.fr` (404) → `breyvio.com` (200).
+- Chiffres : `1685` → 2 862 backend + 869 front Breyvio (chip « 3 731 tests »), 2 031 AudySpark, compteur global « 5 700+ » ; « mars 2026 » → « approuvé par Shopify le 24 mai 2026 ».
+- Chronologie : Founder solo `Déc. 2023 → Présent`, Ada Tech School `2020 → 2022`.
+- Tiret cadratin supprimé de tout texte visible (i18n, `Footer.tsx`, sujet mailto `Contact.tsx`, `<title>` de `index.html`). Item AudySpark EN aligné sur FR (capture locale, 2 031 tests).
+
+## Structure (code)
+- Nouveau `sections/Services.tsx` (grille 3 cartes, pattern `Experience.tsx`, bandeau note + CTA `/contact`), id `services`.
+- `App.tsx` : Home = Hero → About → SocialProof → Projects → **Services** → Skills → Experience → Highlights → FinalCta.
+- `Header.tsx` : lien `/#services` desktop + drawer mobile.
+- `Hero.tsx`, `Footer.tsx` : GitHub `khalifatambadou` (404) → `khalifa9660` (200).
+
+## Vérification
+```bash
+npm run lint   # tsc --noEmit ✅ 0 erreur
+npm run build  # ✅ built in 1.52s · index-*.js 428.68 kB │ gzip 134.38 kB
+grep -rnP '\xe2\x80\x94' index.html src   # ✅ 0 tiret long U+2014 hors commentaires
+curl -I https://github.com/khalifa9660   # 200 · breyvio.com 200 · folomi-paris.github.io 200
+```
+- Captures Playwright (Chrome non connecté) : `~/Desktop/Portfolio captures/services-fr.png` et `services-en.png` (1440×1000, 3 paliers rendus, nav Services présente, prix identiques à OFFRE.md).
+
+## Reste à faire
+- Déploiement (cible à choisir : Vercel ou GitHub Pages, branche par défaut du repo = `Projet`) puis URL à consigner dans `PROFIL.md` ligne « Portfolio déployé ».
+- Aucun commit effectué (à la demande).
+
+---
+
+# Alignement avec le CV Software Engineer (2026-09-09)
+
+## Contenu
+
+- Positionnement recentré sur Software Engineer Fullstack, TypeScript et SaaS AI-native.
+- Breyvio et AudySpark séparés dans un bloc Projets personnels.
+- Breyvio décrit avec le moteur déterministe 0–100, environ 26 facteurs, 4 couches de guardrails, la sécurité Shopify et 38 langues.
+- AudySpark décrit par son pipeline URL vers rapport priorisé et son framework sur 12 dimensions CRO.
+- Chronologie alignée sur le CV : freelance depuis décembre 2024, Breyvio depuis 2026, AudySpark de 2025 à 2026, VIR by JP de 2022 à 2024.
+- Compétences réorganisées en 5 familles : Software Engineering, Backend & Data, AI Engineering, Sécurité & intégrations, Engineering.
+- Section tarifaire et navigation Services retirées.
+- CV téléchargeable depuis le hero. Le lien email interne de la copie publique a été corrigé.
+
+## Interface et métadonnées
+
+- Hero et métadonnées mis à jour en français et en anglais.
+- Débordement horizontal des animations corrigé sur mobile.
+- Favicon ajouté pour supprimer l'erreur 404 du navigateur.
+
+## Vérification
+
+- `npm run lint` et `npm run build` exécutés après les modifications.
+- Contrôle navigateur à 1440 × 1000 et 390 × 844.
+- Bascule FR/EN, absence du lien Services, images principales et téléchargement du CV vérifiés.

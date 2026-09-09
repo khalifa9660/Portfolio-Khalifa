@@ -60,7 +60,7 @@ export default function App() {
   return (
     <AppProvider>
       <Router>
-        <div className="min-h-screen bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white transition-colors duration-300 selection:bg-black/10 dark:selection:bg-white/20">
+        <div className="min-h-screen overflow-x-hidden bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white transition-colors duration-300 selection:bg-black/10 dark:selection:bg-white/20">
           <ScrollToHash />
           <ScrollProgress />
           {/* Grain texture overlay — très subtil, feel premium */}

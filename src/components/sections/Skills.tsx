@@ -17,7 +17,7 @@ export default function Skills() {
           <h3 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white">{t.skills.title}</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-12 md:gap-8 mb-16">
           {t.skills.categories.map((category, index) => (
             <motion.div
               key={category.title}

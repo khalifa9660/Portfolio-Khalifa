@@ -26,7 +26,7 @@ export default function ContactPage() {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const subject = encodeURIComponent(`[Portfolio] Contact — ${formData.name}`);
+    const subject = encodeURIComponent(`[Portfolio] Contact · ${formData.name}`);
     const body = encodeURIComponent(
       `Nom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
