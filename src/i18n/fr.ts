@@ -55,7 +55,7 @@ const fr = {
       {
         id: 2,
         title: "AudySpark",
-        category: "Projet personnel · SaaS d'analyse CRO",
+        category: "Projet personnel · SaaS AI-native d'analyse CRO",
         description:
           "SaaS automatisant l'analyse de landing pages et la production de recommandations CRO exploitables. Le pipeline transforme une URL en extraction structurée, analyse, scoring et rapport priorisé. Il associe un framework d'évaluation sur 12 dimensions CRO à une orchestration LLM multi-passes.",
         image: "/screenshots/Audyspark.png",

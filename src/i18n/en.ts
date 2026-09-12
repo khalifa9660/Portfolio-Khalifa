@@ -56,7 +56,7 @@ const en: Translation = {
       {
         id: 2,
         title: "AudySpark",
-        category: "Personal project · CRO analysis SaaS",
+        category: "Personal project · AI-native CRO analysis SaaS ",
         description: "SaaS that automates landing-page analysis and produces actionable CRO recommendations. Its pipeline transforms a URL into structured extraction, analysis, scoring and a prioritized report. It combines a 12-dimension CRO evaluation framework with multi-pass LLM orchestration.",
         image: "/screenshots/Audyspark.png",
         tags: ["TypeScript", "Next.js", "Supabase", "PostgreSQL", "LLM APIs", "Stripe"],
